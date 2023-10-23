@@ -1,4 +1,4 @@
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
 import Home from "./page/Home";
@@ -13,7 +13,7 @@ function App() {
 
   const {theme} = useContext(TContext);
 
-  const routes = createHashRouter ([
+  const routes = createBrowserRouter ([
     {
       path: "/",
       element: <Home />,
