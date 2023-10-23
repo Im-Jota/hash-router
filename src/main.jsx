@@ -5,9 +5,7 @@ import "./index.css";
 import TState from "./context/theme/TState.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
     <TState>
       <App />
     </TState>
-  </React.StrictMode>
 );

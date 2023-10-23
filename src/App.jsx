@@ -1,4 +1,5 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import * as React from "react";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
 import Home from "./page/Home";
@@ -8,29 +9,34 @@ import { useContext } from "react";
 import TContext from "./context/theme/TContext";
 import Projects from "./routes/Projects";
 import Main from "./routes/Main";
+import Error404 from './page/Error404'
 
 function App() {
 
   const {theme} = useContext(TContext);
 
-  const routes = createBrowserRouter ([
+  const routes = createHashRouter ([
     {
-      path: "/",
+      path: '/',
       element: <Home />,
       children: [
         {
           path: '/',
-          element: <Main />
+          element: <Main />,
         },
         {
-          path: "/about",
+          path: '/about',
           element: <About />,
         },
         {
           path: '/projects',
           element: <Projects />
-        }
+        },
       ],
+    },
+    {
+      path: '*',
+      element: <Error404 />
     }
   ]);
   return (

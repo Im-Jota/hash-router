@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'https://Im-Jota.github.io/hash-router/'
+  base: '/hash-router/'
 })
