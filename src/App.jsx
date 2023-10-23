@@ -31,10 +31,6 @@ function App() {
           element: <Projects />
         }
       ],
-    },
-    {
-      path: '*',
-      element: '<h2>yes</h2>'
     }
   ]);
   return (
